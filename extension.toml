@@ -1,6 +1,6 @@
 id = "go-snippets"
 name = "Go Snippets"
-version = "0.1.0"
+version = "0.2.0"
 schema_version = 1
 authors = ["Ayberk Gezer <ayberkgezer@outlook.com>"]
 description = "Go snippets for Zed IDE. A collection of go snippets to improve your development speed."

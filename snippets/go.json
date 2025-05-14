@@ -268,5 +268,128 @@
     "prefix": "go-sort",
     "body": "type ${1:SortBy} []${2:Type}\n\nfunc (a $1) Len() int           { return len(a) }\nfunc (a $1) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }\nfunc (a $1) Less(i, j int) bool { ${3:return a[i] < a[j]} }",
     "description": "Snippet for a custom sort.Sort interface implementation, for a given slice type."
+  },
+  "block": {
+    "prefix": "tblock",
+    "body": ["{{ block \"${1:name}\" .${2:pipeline} }}", "$0"],
+    "description": "{{ block \"name\" pipeline }}"
+  },
+  "blockend": {
+    "prefix": "tblockend",
+    "body": ["{{ block \"${1:name}\" .${2:pipeline} }}", "\t$0", "{{ end }}"],
+    "description": "{{ block \"name\" pipeline }} ... {{ end }}"
+  },
+  "break": {
+    "prefix": "tbreak",
+    "body": ["{{ break }}", "$0"],
+    "description": "{{ break }}"
+  },
+  "continue": {
+    "prefix": "tcontinue",
+    "body": ["{{ continue }}", "$0"],
+    "description": "{{ continue }}"
+  },
+  "define": {
+    "prefix": "tdefine",
+    "body": ["{{ define \"${1:name}\" }}", "\t$0"],
+    "description": "{{ define \"name\" }}"
+  },
+  "defineend": {
+    "prefix": "tdefineend",
+    "body": ["{{ define \"${1:name}\" }}", "\t${0:...}", "{{ end }}"],
+    "description": "{{ define \"name\" }} ... {{ end }}"
+  },
+  "else": {
+    "prefix": "telse",
+    "body": ["{{ else }}", "\t$0"],
+    "description": "{{ else }}"
+  },
+  "elseif": {
+    "prefix": "telseif",
+    "body": ["{{ else if (${1:condition}) }}", "\t$0"],
+    "description": "{{ else if (condition) }}"
+  },
+  "end": {
+    "prefix": "tend",
+    "body": ["{{ end }}"],
+    "description": "{{ end }}"
+  },
+  "if": {
+    "prefix": "tif",
+    "body": ["{{ if (${1:condition}) }}"],
+    "description": "{{ if (condition) }}"
+  },
+  "ifend": {
+    "prefix": "tifend",
+    "body": ["{{ if (${1:condition}) }}", "\t${0:...}", "{{ end }}"],
+    "description": "{{ if (condition) }} ... {{ end }}"
+  },
+  "ifelseend": {
+    "prefix": "tifelseend",
+    "body": [
+      "{{ if (${1:condition}) }}",
+      "\t${2:...}",
+      "{{ else }}",
+      "\t${0:...}",
+      "{{ end }}"
+    ],
+    "description": "{{ if (condition) }} ... {{ else }} ... {{ end }}"
+  },
+  "partial": {
+    "prefix": "tpartial",
+    "body": ["{{ partial \"${1:name}\" }}", "$0"],
+    "description": "{{ partial \"name\" }}"
+  },
+  "pipeline": {
+    "prefix": "tpipeline",
+    "body": ["{{ .${0:pipeline} }}"],
+    "description": "{{ pipeline }}"
+  },
+  "range": {
+    "prefix": "trange",
+    "body": ["{{ range .${1:pipeline} }}", "\t$0"],
+    "description": "{{ range pipeline }}"
+  },
+  "rangeend": {
+    "prefix": "trangeend",
+    "body": ["{{ range .${1:pipeline} }}", "\t${0:...}", "{{ end }}"],
+    "description": "{{ range pipeline }} ... {{ end }}"
+  },
+  "template": {
+    "prefix": "ttemplate",
+    "body": ["{{ template \"${1:name}\" .${2:pipeline} }}", "$0"],
+    "description": "{{ template \"name\" pipeline }}"
+  },
+  "with": {
+    "prefix": "twith",
+    "body": ["{{ with ${1:pipeline} }}"],
+    "description": "{{ with pipeline }}"
+  },
+  "withend": {
+    "prefix": "twithend",
+    "body": ["{{ with ${1:pipeline} }}", "\t${2:...}", "{{ end }}"],
+    "description": "{{ with pipeline }} ... {{ end }}"
+  },
+  "withelseend": {
+    "prefix": "twithelseend",
+    "body": [
+      "{{ with ${1:pipeline} }}",
+      "\t${2:...}",
+      "{{ else }}",
+      "\t${3:...}",
+      "{{ end }}"
+    ],
+    "description": "{{ with pipeline }} ... {{ else }} ... {{ end }}"
+  },
+  "withelsepipeeend": {
+    "prefix": "twithelsepipeeend",
+    "body": [
+      "{{ with ${1:pipeline} }}",
+      "\t${2:...}",
+      "{{ else with ${3:pipeline} }}",
+      "\t${4:...}",
+      "{{ end }}"
+    ],
+    "description": "{{ with pipeline }} ... {{ else with pipeline }} ... {{ end }}"
   }
 }

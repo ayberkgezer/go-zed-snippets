@@ -12,6 +12,7 @@ This extension provides a comprehensive set of snippets for Go development, incl
 - Common Go patterns
 - HTTP server code
 - Testing helpers
+- Template snippets
 - And much more!
 
 ## Installation
@@ -93,6 +94,27 @@ Start typing the snippet prefix (e.g., `go-func`) in a Go file and press `Tab` t
 | `go-meth` | Method declaration |
 | `go-helloweb` | Hello world web app |
 | `go-sort` | Sort implementation |
+| `tblock`              | `{{ block "name" pipeline }}`
+| `tblockend`           | `{{ block "name" pipeline }} ... {{ end }}`
+| `tbreak`              | `{{ break }}`
+| `tcontinue`           | `{{ continue }}`
+| `tdefine`             | `{{ define "name" }}`
+| `tdefineend`          | `{{ define "name" }} ... {{ end }}`
+| `telse`               | `{{ else }}`
+| `telseif`             | `{{ else if (condition) }}`
+| `tend`                | `{{ end }}`
+| `tif`                 | `{{ if (condition) }}`
+| `tifend`              | `{{ if (condition) }} ... {{ end }}`
+| `tifelseend`          | `{{ if (condition) }} ... {{ else }} ... {{ end }}`
+| `tpartial`            | `{{ partial "name" }}`
+| `tpipeline`           | `{{ pipeline }}`
+| `trange`              | `{{ range pipeline }}`
+| `trangeend`           | `{{ range pipeline }} ... {{ end }}`
+| `ttemplate`           | `{{ template "name" pipeline }}`
+| `twith`               | `{{ with pipeline }}`
+| `twithend`            | `{{ with pipeline }} ... {{ end }}`
+| `twithelseend`        | `{{ with pipeline }} ... {{ else }} ... {{ end }}`
+| `twithelsepipeeend`   | `{{ with pipeline }} ... {{ else with pipeline }} ... {{ end }}`
 
 ## Examples
 
