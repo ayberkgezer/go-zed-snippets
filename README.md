@@ -94,27 +94,27 @@ Start typing the snippet prefix (e.g., `go-func`) in a Go file and press `Tab` t
 | `go-meth` | Method declaration |
 | `go-helloweb` | Hello world web app |
 | `go-sort` | Sort implementation |
-| `tblock`              | `{{ block "name" pipeline }}`
-| `tblockend`           | `{{ block "name" pipeline }} ... {{ end }}`
-| `tbreak`              | `{{ break }}`
-| `tcontinue`           | `{{ continue }}`
-| `tdefine`             | `{{ define "name" }}`
-| `tdefineend`          | `{{ define "name" }} ... {{ end }}`
-| `telse`               | `{{ else }}`
-| `telseif`             | `{{ else if (condition) }}`
-| `tend`                | `{{ end }}`
-| `tif`                 | `{{ if (condition) }}`
-| `tifend`              | `{{ if (condition) }} ... {{ end }}`
-| `tifelseend`          | `{{ if (condition) }} ... {{ else }} ... {{ end }}`
-| `tpartial`            | `{{ partial "name" }}`
-| `tpipeline`           | `{{ pipeline }}`
-| `trange`              | `{{ range pipeline }}`
-| `trangeend`           | `{{ range pipeline }} ... {{ end }}`
-| `ttemplate`           | `{{ template "name" pipeline }}`
-| `twith`               | `{{ with pipeline }}`
-| `twithend`            | `{{ with pipeline }} ... {{ end }}`
-| `twithelseend`        | `{{ with pipeline }} ... {{ else }} ... {{ end }}`
-| `twithelsepipeeend`   | `{{ with pipeline }} ... {{ else with pipeline }} ... {{ end }}`
+| `go-tblock`              | `{{ block "name" pipeline }}`
+| `go-tblockend`           | `{{ block "name" pipeline }} ... {{ end }}`
+| `go-tbreak`              | `{{ break }}`
+| `go-tcontinue`           | `{{ continue }}`
+| `go-tdefine`             | `{{ define "name" }}`
+| `go-tdefineend`          | `{{ define "name" }} ... {{ end }}`
+| `go-telse`               | `{{ else }}`
+| `go-telseif`             | `{{ else if (condition) }}`
+| `go-tend`                | `{{ end }}`
+| `go-tif`                 | `{{ if (condition) }}`
+| `go-tifend`              | `{{ if (condition) }} ... {{ end }}`
+| `go-tifelseend`          | `{{ if (condition) }} ... {{ else }} ... {{ end }}`
+| `go-tpartial`            | `{{ partial "name" }}`
+| `go-tpipeline`           | `{{ pipeline }}`
+| `go-trange`              | `{{ range pipeline }}`
+| `go-trangeend`           | `{{ range pipeline }} ... {{ end }}`
+| `go-ttemplate`           | `{{ template "name" pipeline }}`
+| `go-twith`               | `{{ with pipeline }}`
+| `go-twithend`            | `{{ with pipeline }} ... {{ end }}`
+| `go-twithelseend`        | `{{ with pipeline }} ... {{ else }} ... {{ end }}`
+| `go-twithelsepipeeend`   | `{{ with pipeline }} ... {{ else with pipeline }} ... {{ end }}`
 
 ## Examples
 
